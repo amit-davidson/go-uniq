@@ -3,8 +3,8 @@ package main
 import (
 	"flag"
 	"fmt"
-	"goUniq/pkg/domain"
-	"goUniq/pkg/utils"
+	"github.com/amitdavidson234/go-uniq/pkg/domain"
+	"github.com/amitdavidson234/go-uniq/pkg/utils"
 	"os"
 )
 

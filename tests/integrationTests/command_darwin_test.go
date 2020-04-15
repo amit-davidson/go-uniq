@@ -3,7 +3,7 @@
 package integrationTests
 
 import (
-	"goUniq/tests/testUtils"
+	"github.com/amitdavidson234/go-uniq/tests/testUtils"
 	"testing"
 )
 

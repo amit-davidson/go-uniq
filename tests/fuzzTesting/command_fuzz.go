@@ -1,14 +1,14 @@
 package fuzzTesting
 
 import (
-	"goUniq/pkg/utils"
-	"goUniq/tests/testUtils"
+	"github.com/amitdavidson234/go-uniq/pkg/utils"
+	"github.com/amitdavidson234/go-uniq/tests/testUtils"
 	"path"
 )
 
 func FuzzRegularCommandFlags(data []byte) int {
 	// initPart
-	modulePath := testUtils.GetModulePath()
+	modulePath := testUtils.GetProjectRootPath()
 	binaryName := path.Join(modulePath, "cmdCommand")
 
 	fileInputName := path.Join(modulePath, "tests", "fuzzTesting", "corpus", randSeq(10) + ".txt")

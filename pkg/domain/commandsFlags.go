@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"strings"
 
-	"goUniq/pkg/utils"
+	"github.com/amitdavidson234/go-uniq/pkg/utils"
 )
 
 type CommandsFlags struct{}

@@ -2,7 +2,7 @@ package fuzzTesting
 
 import (
 	"fmt"
-	"goUniq/pkg/utils"
+	"github.com/amitdavidson234/go-uniq/pkg/utils"
 	"math/rand"
 	"os"
 	"time"

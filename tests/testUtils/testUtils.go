@@ -2,12 +2,14 @@ package testUtils
 
 import (
 	"fmt"
+	"github.com/amitdavidson234/go-uniq/pkg/utils"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"goUniq/pkg/utils"
 	"os"
 	"os/exec"
 	"path"
+	"path/filepath"
+	"runtime"
 	"strings"
 	"testing"
 )
@@ -82,13 +84,15 @@ func RunCommandWithAgainstRealCommand(t *testing.T, binaryName string, flags []s
 	assert.Equal(t, outputUniq, outputBinary)
 }
 
-func GetModulePath() string {
-	gp := os.Getenv("GOPATH")
-	return path.Join(gp, "src/goUniq")
+func GetProjectRootPath() string {
+	_, b, _, _ := runtime.Caller(0)
+	projectRoot := filepath.Join(filepath.Dir(b), "../..")
+
+	return projectRoot
 }
 
 func GetBinary(binaryName string) (func() error, error) {
-	modulePath := GetModulePath()
+	modulePath := GetProjectRootPath()
 	mainPath := path.Join(modulePath, "cmd/main.go")
 
 	buildCommand := BuildCommand("go", []string{"build", "-a", "-o", binaryName, mainPath}, []string{})
@@ -102,5 +106,4 @@ func GetBinary(binaryName string) (func() error, error) {
 		_, err := RunCommand(removeCmd)
 		return err
 	}, nil
-
 }

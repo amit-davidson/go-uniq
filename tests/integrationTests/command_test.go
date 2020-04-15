@@ -2,9 +2,9 @@ package integrationTests
 
 import (
 	"fmt"
+	"github.com/amitdavidson234/go-uniq/pkg/utils"
+	"github.com/amitdavidson234/go-uniq/tests/testUtils"
 	"github.com/stretchr/testify/require"
-	"goUniq/pkg/utils"
-	"goUniq/tests/testUtils"
 	"math/rand"
 	"os"
 	"testing"

@@ -3,8 +3,8 @@ package integrationTests
 import (
 	"flag"
 	"fmt"
-	"goUniq/pkg/utils"
-	"goUniq/tests/testUtils"
+	"github.com/amitdavidson234/go-uniq/pkg/utils"
+	"github.com/amitdavidson234/go-uniq/tests/testUtils"
 	"math/rand"
 	"os"
 	"testing"
